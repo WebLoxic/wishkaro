@@ -6,14 +6,14 @@ import fs from 'fs';
 const uploadPath = './uploads';
 if (!fs.existsSync(uploadPath)) {
     fs.mkdirSync(uploadPath);
-}
+}    
 
 // Configure multer storage
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'uploads');
     },
-    filename: function (req, file, cb) {
+    filename: function (req, file, cb) {       
         const ext = path.extname(file.originalname);
         cb(null, `${file.fieldname}-${Date.now()}${ext}`);
     },
