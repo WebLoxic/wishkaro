@@ -18,9 +18,7 @@ const userSchema = new mongoose.Schema({
     holderName : { type: String  },
     sendrefferal : { type: String , required : true  },
     inviterefferal : { type: String , required: true },
-    refferalCount: { type: Number, default: 0 },
-    resetToken: { type: String },
-    resetTokenExpiry: { type: Date },
+    refferalCount: { type: Number, default: 0 }
 
 })
 

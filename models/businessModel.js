@@ -13,7 +13,7 @@ const bussinessSchema = new mongoose.Schema({
     businessRating: {type:Number , required: true},
     businessReviews: [{type:mongoose.Schema.Types.ObjectId, ref: 'Review'}],
     businessOwnerName : {type:String , required: true },
-    businessImage: {type:String , required: true},     
+    businessImage: {type:String , required: true},
     businessOwnerImage : { type: String , required:true },
     businessDistrict : {type:String , required: true },
     businessCountry : { type:String , required: true},
